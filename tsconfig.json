@@ -1,0 +1,23 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+
+  "compilerOptions": {
+    "outDir": "./lib",
+
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es2015"],
+
+    "declaration": true,
+    "sourceMap": true,
+
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+
+    "pretty": true
+  }
+}
+
