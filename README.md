@@ -100,7 +100,7 @@ state$.pipe(
 
 #### Limit invocations to one at a time
 
-Sometimes props change faster than the the time to finish async operation. If that happens it helps to:
+Sometimes props change faster than the time required to finish async operation. If that happens, it helps to:
  - run only one `mapPropsToObservable` at a time (ignoring other prop changes in the meantime)
  - always make sure `mapPropsToObservable` one final time with the most recent props.
 
@@ -178,6 +178,17 @@ state$.pipe(
     flatMap(processItem)
 );
 ```
+
+## Testing
+
+Testing RXJS code can be often quite cumbersome. In most cases this library helps you keep your logic outside of RxJS and test it independently.
+
+When you follow pattern explained by [recipes](#recipes), you can focus your testing on these methods:
+
+ - mapInputToProps
+ - arePropsEqual
+ - mapPropsToActions, mapPropsToObservable, etc.
+
 
 ## License
 
