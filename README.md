@@ -1,18 +1,20 @@
 # RxJS-Redux
 
-React-Redux-like bindings for Redux Observable
+Simple, yet powerful, epics built on top of Redux-Observable.
 
 ## What is this?
 
-**Easy to understand** and **testable** alternative to managing asynchronous behaviour with [redux-observable](https://github.com/redux-observable/redux-observable).
+This library builds on top of [redux-observable](https://github.com/redux-observable/redux-observable) to help you implement epics that are **easy to understand** and **testable**.
+
+Our experience shows that RxJS by itself can be hard to learn, understand and manage. RxJS-Redux provides with a simple and consistent pattern for building epics that leverage the power of RxJS while keeping the epics simple.
 
 ## How it works
 
-This library is significantly influenced by [react-redux](https://github.com/reduxjs/react-redux). So much so, that it can be explained with a rehashed description of react-redux:
+RxJS-Redux is for RxJS and Redux, what [react-redux](https://github.com/reduxjs/react-redux) is for React and Redux. So much so, that it can be explained with a rehashed description of react-redux:
 
 >rxjs-redux is conceptually pretty simple. It subscribes to the stream of Redux state, checks to see if the data your epic wants has changed, and re-executes the business logic of your epic.
 
-By reusing already familiar approach this library brings simplicity to your applications.
+If you're using react-redux for your UI, using rxjs-redux for Epics should be a no-brainer, thanks to the familiar approach.
 
 ## Install
 
