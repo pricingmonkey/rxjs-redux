@@ -99,4 +99,25 @@ describe('connect', () => {
       value: { a: 0 }
     }]);
   });
+
+  it('should not stream values when props change, but context stays the same', () => {
+    const scheduler = new TestScheduler();
+
+    const input$ = scheduler.inputStreamBuilder()
+      .emit(0, { a: 1, b: 2 })
+      .emit(20, { a: 1, b: 3 })
+      .emit(40, { a: 1, b: 4 })
+      .build();
+
+    const mapInputToProps = (input: { a: number, b: number }) => ({ a: input.a });
+    const mapInputToContext = (input: { a: number, b: number }) => ({ b: input.b });
+    const observable$ = input$.pipe(connect(mapInputToProps, mapInputToContext));
+
+    const values = scheduler.run(observable$);
+
+    expect(values).to.eql([{
+      time: 0,
+      value: { a: 1, b: 2 }
+    }]);
+  });
 });

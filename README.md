@@ -100,6 +100,29 @@ state$.pipe(
 );
 ```
 
+### Separate "context" - that is required downstream, but shouldn't retrigger the epic
+
+```typescript
+const mapPropsToObservable = (props: Props) => {
+    return from(returnPromise(props.contextState));
+}
+
+const mapStateToStateProps = (state: State) => ({
+  property: state.property
+});
+
+const mapStateToContextProps = (state: State) => ({
+  contextState: state.contextState
+});
+
+// mapPropsToObservable will only be executed when "property" changes
+// and the latest value of contextState will be included in Props
+state$.pipe(
+    connect(mapStateToStateProps, mapStateToContextProps),
+    flatMap(mapPropsToObservable)
+);
+```
+
 #### Limit invocations to one at a time
 
 Sometimes props change faster than the time required to finish async operation. If that happens, it helps to:
