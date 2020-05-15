@@ -28,7 +28,7 @@ if [[ -z $(git status -uno --porcelain) ]]; then
     fi
 
     read -p "Enter 2FA auth token: " AUTH;
-    npm publish --tag $DIST_TAG --otp $AUTH;
+    yarn publish --tag $DIST_TAG --otp $AUTH;
   else
     git checkout -f package.json CHANGELOG.md;
     echo "Cancelled publish by your request!";
