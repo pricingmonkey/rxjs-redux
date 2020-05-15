@@ -1,3 +1,12 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/pricingmonkey/rxjs-redux/compare/v1.0.2...v1.1.1) (2020-05-15)
+
+
+### Features
+
+* **connect:** Allow to separate 'state props' (which would cause epic retrigger) & context props (which don't cause epic retrigger, but might be used in the processing downstream.
+
+<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/pricingmonkey/rxjs-redux/compare/v1.0.1...v1.0.2) (2019-04-26)
 
 
@@ -5,7 +14,7 @@
 
 * **documentation:** refactor why and how it works
 
-<a name="1.0.0"></a>
+<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/pricingmonkey/rxjs-redux/compare/v1.0.0...v1.0.1) (2019-04-24)
 
 
