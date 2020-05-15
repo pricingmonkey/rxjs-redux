@@ -1,3 +1,9 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/pricingmonkey/rxjs-redux/compare/v1.1.1...v1.1.2) (2020-05-15)
+
+
+Maintenance release - all dependencies upgraded to the latest.
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/pricingmonkey/rxjs-redux/compare/v1.0.2...v1.1.1) (2020-05-15)
 
