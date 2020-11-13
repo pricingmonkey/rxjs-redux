@@ -1,5 +1,5 @@
-<a name="1.1.3"></a>
-## [1.1.3](https://github.com/pricingmonkey/rxjs-redux/compare/v1.1.2...v1.1.3) (2020-11-13)
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/pricingmonkey/rxjs-redux/compare/v1.1.2...v1.1.4) (2020-11-13)
 
 ### Bug fixes
 
