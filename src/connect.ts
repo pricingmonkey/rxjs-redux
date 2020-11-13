@@ -53,7 +53,12 @@ const connectWithContext = <I, P, C>(
     const context$ = input$.pipe(map(mapInputToContext));
     return props$.pipe(
       withLatestFrom(context$),
-      map(([props, context]) => ({ ...props, ...context }))
+      map(([props, context]) => {
+        if (props === undefined && context === undefined) {
+          return undefined;
+        }
+        return ({ ...props, ...context });
+      })
     );
   };
 };

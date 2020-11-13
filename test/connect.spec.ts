@@ -120,4 +120,22 @@ describe('connect', () => {
       value: { a: 1, b: 2 }
     }]);
   });
+
+  it('should stream undefined if both mapStateToProps & mapContextToProps return undefined', () => {
+    const scheduler = new TestScheduler();
+
+    const input$ = scheduler.inputStreamBuilder()
+      .emit(0, { a: 1, b: 2 })
+      .build();
+
+    const mapToUndefined = () => undefined;
+    const observable$ = input$.pipe(connect(mapToUndefined, mapToUndefined));
+
+    const values = scheduler.run(observable$);
+
+    expect(values).to.eql([{
+      time: 0,
+      value: undefined
+    }]);
+  });
 });
