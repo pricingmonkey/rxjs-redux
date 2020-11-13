@@ -1,3 +1,11 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/pricingmonkey/rxjs-redux/compare/v1.1.2...v1.1.3) (2020-11-13)
+
+### Bug fixes
+
+* **connect:** should stream undefined if both mapStateToProps and mapContextToProps return undefined
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/pricingmonkey/rxjs-redux/compare/v1.1.1...v1.1.2) (2020-05-15)
 
